@@ -1,38 +1,113 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Activity 5: Responsive design</title>
-  </head>
-  <body>
-    <h1>Activity 5: Responsive design</h1>
-    <p>The aim of this activity is to build a responsive layout using Bootstrap.
-       Write the code under the following paragraph, it must have:
-    </p>
-    <ul>
-      <li>A menu bar with 3 options (Option 1, Option 2, Option 3), the last
-        option must be a dropdown option with 2 options inside (Option 3.1,
-        Option 3.2)
-      </li>
-      <li>A red backgound main content space (8 cols, 12 cols on small) next to a blue background
-        right bar (4 cols, 12 cols on small)
-      </li>
-      <li>A grey backgound footer space full width
-      </li>
-    </ul>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Your code here -->
+  <title>Activity 5: Responsive design</title>
+</head>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+<body>
+  <h1>Activity 5: Responsive design</h1>
+  <p>The aim of this activity is to build a responsive layout using Bootstrap.
+    Write the code under the following paragraph, it must have:
+  </p>
+  <ul>
+    <li>A menu bar with 3 options (Option 1, Option 2, Option 3), the last
+      option must be a dropdown option with 2 options inside (Option 3.1,
+      Option 3.2)
+    </li>
+    <li>A red backgound main content space (8 cols, 12 cols on small) next to a blue background
+      right bar (4 cols, 12 cols on small)
+    </li>
+    <li>A grey backgound footer space full width
+    </li>
+  </ul>
+
+  <!-- Your code here -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-ligh bg-light">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+      aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="?section=option1">Option 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="?section=option2">Option 2</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="?section=option3" id="dropdownmenuitem" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Option 3
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownmenuitem">
+            <a class="dropdown-item" href="?section=option3.1">Option 3.1</a>
+            <a class="dropdown-item" href="?section=option3.2">Option 3.2</a>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div id="main-content" class="col-md-8 col-sm-12 bg-danger">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae lectus sodales, ultricies dui blandit,
+          posuere nunc. Duis eget laoreet metus. Nulla molestie purus ut congue consequat. Integer eget volutpat felis.
+          Donec elementum turpis tellus, at ornare est tempus sed. Maecenas gravida gravida dui non semper. Sed ipsum
+          eros,
+          aliquam vel nunc a, semper euismod nulla. In a eleifend lacus. Mauris dui urna, porta quis eros eu, egestas
+          molestie mauris. Sed ultricies interdum urna, a consectetur dui egestas non. Morbi rhoncus non elit quis
+          porttitor. Phasellus rutrum tincidunt nisl ac consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit.
+          Aenean ut ornare augue.</p>
+
+
+      </div>
+      <div id="sidebar" class="col-md-4 col-sm-12 bg-primary">
+        <p> "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+          dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+          amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+          aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+          laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+          voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+          pariatur?"</p>
+      </div>
+
+    </div>
+  </div>
+  <div id="footer" class="col-md-12 bg-secondary">footer</div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
