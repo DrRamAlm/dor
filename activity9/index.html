@@ -17,16 +17,18 @@
     images.:</p>
   <img srcset="sm.jpg 320w,
     mm.jpg 480w,
-    lm.jpg 800w" sizes="(max-width: 320px) 320px,
+    lm.jpg 800w" 
+    sizes="(max-width: 320px) 320px,
    (max-width: 480px) 480px,
-   800px" src="lm.jpg" alt="landscape">
+   800px" 
+   src="lm.jpg" alt="landscape">
 
   <p>2. Using &lt;picture&gt; stuff make a responsive image that changes depending on the size of the page, up to 3
     images.:</p>
   <picture>
-    <source media="(max-width: 360px)" srcset="sm.jpg">
-    <source media="(max-width: 799px)" srcset="mm.jpg">
-    <source media="(min-width: 800px)" srcset="lm.jpg">
+    <source media="(max-width: 320px)" srcset="sm.jpg">
+    <source media="(max-width: 480px)" srcset="mm.jpg">
+    <source media="(min-width: 481px)" srcset="lm.jpg">
     <img src="lm.jpg" alt="landscape">
   </picture>
 
