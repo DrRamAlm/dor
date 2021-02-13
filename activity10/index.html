@@ -46,6 +46,12 @@
     #topmenu1 {
       height: 30px;
     }
+
+    .important {
+      font-size: 2em;
+      text-decoration: underline;
+
+    }
   </style>
 </head>
 
@@ -55,29 +61,45 @@
     <h2>This is a nightmare webpage in terms of accesibility change <span class="highlight">anything you need</span> to
       make it shine.</h2>
   </header>
-  <main class="container">
-    <div class="row">
-      <div class="col-sm-3" id="topmenu1">
-        <nav class="topmenu-option">
-          Menú 1
-        </nav>
-      </div>
-      <div class="col-sm-3" id="topmenu2">
-        <nav class="topmenu-option">
-          <a href="https://www.wikipedia.org/" title="Enlace Externo a Wikipedia.org">Wikipedia</a>
-        </nav>
-      </div>
-      <div class="col-sm-3" id="topmenu3">
-        <nav class="topmenu-option">
-          <a href="https://www.youtube.com/" title="Enlace Externo a Youtube.com">Youtube</a>
-        </nav>
-      </div>
-      <div class="col-sm-3" id="topmenu4">
-        <nav class="topmenu-option">
-          Menú 4
-        </nav>
-      </div>
+  <main class="container" role="main">
+
+    <div role="navigation" aria-label="main-nav">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Activar o Desactivar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" title="Enlaces a buscadores">
+                Enlaces a Buscadores
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-link" href="https://google.com/" title="Enlace Externo a google.com">Google</a>
+                <a class="nav-link" href="https://bing.com/" title="Enlace Externo a bing.com">Bing</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.wikipedia.org/" title="Enlace Externo a Wikipedia.org">Wikipedia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.youtube.com/" title="Enlace Externo a Youtube.com">Youtube</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
+
+
+
     <div class="row">
       <div class="col-sm-3">
         <span onclick="showContent1()">View content 1</span><br />
@@ -125,13 +147,13 @@
       if (topM1.querySelectorAll('.topmenu-suboption').length) {
         topM1.innerHTML = '<div class="topmenu-option">Menu 1</div>';
       } else {
-        topM1.innerHTML = '<div class="topmenu-option">Menu 1</div><div class="topmenu-submenu"><div class="topmenu-suboption"><a href="https://google.com/">Google</div><div class="topmenu-suboption"><a href="https://bing.com/">Bing</div></div>';
+        topM1.innerHTML = '<div class="topmenu-option">Menu 1</div><div class="topmenu-submenu"><div class="topmenu-suboption"><a href="https://google.com/">Google</a><div class="topmenu-suboption"><a href="https://bing.com/">Bing</a></div>';
       }
     }
 
     function showContent1() {
       var content = document.getElementById('content');
-      content.innerHTML = '<span class="important" style="color:#fffc16; font-size:2em;">This is the first content:<br/><img src="content1.png"></span><h1>and lot more</h1>Lorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut laboreLorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut labore<h1>content</h1><h4>is</h4><h4>important</h4>'
+      content.innerHTML = '<h1 class="important" >This is the first content:<br/></h1><p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus </p><h2>and lot more</h2>Lorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut laboreLorem ipsum dolor sit amet, consectetur adipisci tempor incidunt ut labore<h3>content</h3><h4>is important</h4>'
     }
     function showContent2() {
       var content = document.getElementById('content');
